@@ -386,3 +386,44 @@ header {
         margin-right: 0; /* No right margin */
     }
 }
+
+/* Use relative units for dimensions */
+.project-card, .container, .section {
+    width: 100%;  /* Example: change fixed widths to percentages or viewport units */
+    max-width: 1200px; /* Ensures content does not stretch beyond a certain point */
+}
+
+/* Handle overflow in project containers */
+.projects-section {
+    overflow-x: auto; /* Allows horizontal scrolling if contents overflow */
+    padding: 20px; /* Adds some space around the contents */
+}
+
+/* Improved media queries */
+@media (max-width: 1024px) {
+    .project-card {
+        width: 50%; /* Larger view on smaller screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .project-card {
+        width: 100%; /* Full width on very small screens */
+    }
+
+    .home, .section {
+        padding: 10px; /* Reduce padding for smaller screens */
+    }
+}
+
+/* Ensuring flexibility */
+.container, .projects-section, .about-section {
+    min-height: auto; /* Allows the container to grow */
+    padding: 20px; /* Provides padding to prevent content touching the edges */
+}
+
+/* Adjusting font sizes using relative units */
+body, h1, h2, h3, p {
+    font-size: 1rem; /* Base font size, scale up from here using em */
+}
+
