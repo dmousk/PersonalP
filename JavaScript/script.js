@@ -158,3 +158,10 @@ document.addEventListener('DOMContentLoaded', function() {
     // Initially display the first project
     displayProject(currentIndex);
 });
+
+document.addEventListener('wheel', function(event) {
+    if (event.ctrlKey === true) {
+      event.preventDefault();
+      document.body.style.zoom = "90%";
+    }
+  });
